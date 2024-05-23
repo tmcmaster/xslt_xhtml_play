@@ -9,52 +9,12 @@
                 <script src="script.js" />
             </head>
             <body>
-                <div class="centered">
+                <div>
                     <xsl:apply-templates select="html/body/*" />
                 </div>
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="header">
-        <header>
-            <h1>
-                <xsl:value-of select="h1" />
-            </h1>
-            <nav>
-                <ul>
-                    <xsl:apply-templates select="nav/ul/li" />
-                </ul>
-            </nav>
-        </header>
-    </xsl:template>
-    <xsl:template match="nav/ul/li">
-        <li>
-            <a href="{a/@href}">
-                <xsl:value-of select="a" />
-            </a>
-        </li>
-    </xsl:template>
-    <xsl:template match="main">
-        <main>
-            <xsl:apply-templates />
-        </main>
-    </xsl:template>
-    <xsl:template match="section">
-        <section id="{@id}">
-            <h2>
-                <xsl:value-of select="h2" />
-            </h2>
-            <xsl:apply-templates select="node()[not(self::h2)]" />
-        </section>
-    </xsl:template>
-    <xsl:template match="footer">
-        <footer>
-            <p>
-                <xsl:value-of select="." />
-            </p>
-        </footer>
-    </xsl:template>
-
     <xsl:template match="*">
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
