@@ -5,8 +5,8 @@
         <html>
             <head>
                 <xsl:apply-templates select="html/head/*" />
-                <link href="website.css" rel="stylesheet" type="text/css" />
-                <script src="website.js" />
+                <link href="style.css" rel="stylesheet" type="text/css" />
+                <script src="script.js" />
             </head>
             <body>
                 <div class="centered">
