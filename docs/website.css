@@ -1,18 +1,20 @@
 :root {
     --primary-color: #2c3e50; /* Dark blue */
-        --secondary-color: #ecf0f1; /* Light gray */
+    --secondary-color: #ecf0f1; /* Light gray */
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 10;
-    padding-top: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 20px;
 }
 
 body > div {
     border: 5px solid var(--primary-color);
     margin: auto;
-    width: 900px;
+    width: 800px;
     padding: 10px;
 }
 
@@ -62,7 +64,10 @@ footer {
     padding: 10px 20px;
 }
 
-/* Animation styles */
+footer > p::before {
+    content: "\00A9\0020"; /** copyright **/
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
