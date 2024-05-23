@@ -33,6 +33,7 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 20px;
+
 }
 
 nav ul li a {
@@ -50,6 +51,16 @@ section {
     margin-bottom: 30px;
     width: 40%;
     margin: 10px;
+}
+
+section ul {
+    padding: 0px;
+    margin-left: 15px;
+}
+
+section ul li {
+    margin-bottom: 4px;
+    padding: 0px;
 }
 
 main section:nth-child(odd) {

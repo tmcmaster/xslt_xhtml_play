@@ -15,6 +15,18 @@
             </body>
         </html>
     </xsl:template>
+    <xsl:template match="nav/ul/li">
+        <li>
+            <a href="{a/@href}">
+                <xsl:value-of select="a" />
+            </a>
+        </li>
+    </xsl:template>
+    <xsl:template match="section">
+        <section id="{@id}">
+            <xsl:apply-templates select="*" />
+        </section>
+    </xsl:template>
     <xsl:template match="*">
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
